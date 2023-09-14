@@ -6,7 +6,7 @@ palindromeWord = "Otto";
 
 
 const getLastElement = (lastElementArray) => {
-    const last = lastElementArray[lastElementArray.length-1];
+    const last = lastElementArray[lastElementArray.length - 1];
     return last
 }
 
@@ -24,36 +24,26 @@ const isPalindrome = (word) => {
     else {
         return word + " is not an palindrom"
     }
-} 
-
-
-
-
-
-
+}
 isPalindrome(palindromeWord);
 isPalindrome(notPalindromWord);
 
 
 
 
-
-
-
 function capitalizeWords(capitaliyeStrig) {
     const sort = capitaliyeStrig.split(" ");
-        
 
     const capitalizedWord = sort.map(word => {
         const firstLetter = word[0].toUpperCase();
         const restWord = word.slice(1).toLowerCase();
         return firstLetter + restWord;
 
- 
+
     })
 
     return capitalizedWord.join(" ");
-    
+
 
 }
 
@@ -70,7 +60,7 @@ console.log(outputCapitalizeWords);
 
 function lengthOfLongestWord(lengthStrig) {
     const words = lengthStrig.split(" ");
-        
+
 
     const lengthedWord = words.map(word => {
         const lengthNumber = word.length;
@@ -78,18 +68,17 @@ function lengthOfLongestWord(lengthStrig) {
         console.log(lengthNumber)
         return lengthNumber;
 
- 
+
     })
-    const sortLengthedWord = lengthedWord.sort(function(a, b) { return b - a;}) ;
+    const sortLengthedWord = lengthedWord.sort(function (a, b) { return b - a; });
     return sortLengthedWord[0];
-    
+
 
 }
 
-const lengthStrig = "wow wow cool test test222";
+const lengthStrig = "Das ist ein bespiel Satz sehrsehrsehrlang";
 const outputLengthWords = lengthOfLongestWord(lengthStrig);
 console.log(outputLengthWords);
 
 
-module.exports = {getLastElement, isPalindrome, capitalizeWords, lengthOfLongestWord}
-
+module.exports = { getLastElement, isPalindrome, capitalizeWords, lengthOfLongestWord }
