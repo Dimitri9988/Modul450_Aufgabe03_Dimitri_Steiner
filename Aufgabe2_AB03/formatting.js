@@ -7,7 +7,7 @@ palindromeWord = "Otto";
 
 const getLastElement = (lastElementArray) => {
     const last = lastElementArray[lastElementArray.length-1];
-    console.log(last);
+    return last
 }
 
 getLastElement(numberArray);
@@ -19,10 +19,10 @@ const isPalindrome = (word) => {
     const reverseWord = lowerCaseWord.split("").reverse().join("")
 
     if (reverseWord === lowerCaseWord) {
-        console.log(word + " is an palindrom")
+        return word + " is an palindrom"
     }
     else {
-        console.log(word + " is not an palindrom")
+        return word + " is not an palindrom"
     }
 } 
 
